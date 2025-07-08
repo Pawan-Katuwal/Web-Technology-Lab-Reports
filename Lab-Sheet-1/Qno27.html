@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Editable Invoice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      border-top: 10px solid #f25c05;
+      border-bottom: 10px solid #f25c05;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .logo-box {
+      background: #eaeaea;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: #ccc;
+      text-align: center;
+      line-height: 80px;
+      font-weight: bold;
+    }
+
+    .company-info {
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .invoice-details {
+      text-align: right;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .billing {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .billing div {
+      width: 48%;
+      font-size: 14px;
+    }
+
+    .billing strong {
+      text-decoration: underline;
+    }
+
+    .billing input {
+      width: 100%;
+      margin: 4px 0;
+      padding: 6px;
+      font-size: 13px;
+    }
+
+    .payment-terms {
+      text-align: right;
+      font-style: italic;
+      font-size: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    thead {
+      background: #f25c05;
+      color: white;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    input[type='text'], input[type='number'] {
+      width: 100%;
+      border: none;
+      text-align: center;
+      background: transparent;
+    }
+
+    .remarks {
+      margin-top: 15px;
+    }
+
+    .summary {
+      max-width: 350px;
+      margin-left: auto;
+      margin-top: 20px;
+    }
+
+    .summary table {
+      width: 100%;
+      font-size: 13px;
+    }
+
+    .summary td {
+      padding: 5px 10px;
+      text-align: right;
+    }
+
+    .balance-due {
+      background-color: #f2dede;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .billing div {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .invoice-details {
+        text-align: left;
+        margin-top: 20px;
+      }
+
+      .summary {
+        float: none;
+        margin: 30px auto;
+      }
+
+      table {
+        font-size: 12px;
+      }
+    }
+    .logo-img {
+  width: 60px;
+  height: auto;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="company">
+        <div class="logo-box">
+            <img src="DevDrift ADV.png" alt="DevDrift Logo" class="logo-img">
+          <div class="company-info">
+            <strong> DevDrift Technologies</strong><br> <!--DevDrift meaning =“A development company that’s constantly evolving, moving forward, and innovating in the tech space.”-->
+            Kathmandu, Nepal<br>
+            Contact@devdrift.com
+          </div>
+        </div>
+      </div>
+      <div class="invoice-details">
+        <h2>INVOICE</h2>
+        <p><strong>Date:</strong> <input type="text" placeholder="2025-07-08"></p>
+        <p><strong>Invoice No:</strong> <input type="text" placeholder="INV-001"></p>
+      </div>
+    </header>
+
+    <div class="billing">
+      <div class="bill-to">
+        <strong>BILL TO</strong><br>
+        <input type="text" placeholder="Contact Name"><br>
+        <input type="text" placeholder="Client Company Name"><br>
+        <input type="text" placeholder="Address"><br>
+        <input type="text" placeholder="Phone"><br>
+        <input type="text" placeholder="Email">
+      </div>
+      <div class="ship-to">
+        <strong>SHIP TO</strong><br>
+        <input type="text" placeholder="Name / Dept"><br>
+        <input type="text" placeholder="Client Company Name"><br>
+        <input type="text" placeholder="Address"><br>
+        <input type="text" placeholder="Phone">
+      </div>
+    </div>
+
+    <p class="payment-terms">Payment terms (due on receipt, due in 7 days, etc)</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>DESCRIPTION</th>
+          <th>QTY</th>
+          <th>UNIT PRICE</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" placeholder="Item 1"></td>
+          <td><input type="number" value="0"></td>
+          <td><input type="number" value="0.00"></td>
+          <td><input type="number" value="0.00"></td>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="Item 2"></td>
+          <td><input type="number" value="0"></td>
+          <td><input type="number" value="0.00"></td>
+          <td><input type="number" value="0.00"></td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Item 3"></td>
+            <td><input type="number" value="0"></td>
+            <td><input type="number" value="0.00"></td>
+            <td><input type="number" value="0.00"></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Item 4"></td>
+            <td><input type="number" value="0"></td>
+            <td><input type="number" value="0.00"></td>
+            <td><input type="number" value="0.00"></td>
+          </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+
+    <div class="remarks">
+      <strong>Remarks / Payment Instructions:</strong><br>
+      <input type="text" placeholder="Enter any notes here" style="width: 100%; padding: 8px;">
+    </div>
+
+    <div class="summary">
+      <table>
+        <tr><td>SUBTOTAL</td><td><input type="number" value="0.00"></td></tr>
+        <tr><td>DISCOUNT</td><td><input type="number" value="0.00"></td></tr>
+        <tr><td>SUBTOTAL LESS DISCOUNT</td><td><input type="number" value="0.00"></td></tr>
+        <tr><td>TAX RATE</td><td><input type="number" value="0.00">%</td></tr>
+        <tr><td>TOTAL TAX</td><td><input type="number" value="0.00"></td></tr>
+        <tr><td>SHIPPING & HANDLING</td><td><input type="number" value="0.00"></td></tr>
+        <tr class="balance-due"><td>Balance Due</td><td>$ <input type="number" value="0.00"></td></tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

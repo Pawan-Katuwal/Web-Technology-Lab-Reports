@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Cards</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        h6,h2,p{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        img{
+            width: 130px;
+            height: 130px;
+            border-radius: 130px;
+            margin-left: 35px;
+            
+        }
+        .image img{
+            border: none;
+            height: 30px;
+            width: 30px;
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card{
+            background-color:white;
+            margin: 20px;
+            height: 500px;
+            padding: 50px;
+            border-radius: 15px;
+            width: 22%;
+
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        h4{
+            margin-top: 150px;
+            text-align: center;
+        }
+        @media (max-width:600px) {
+
+        .box{
+            display: inline;
+        }
+        .image{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card{
+            width: 90%;
+            height: 550px;
+        }
+        .card img{
+            margin-left: 100px;
+        }
+        .image img{
+            width: 10%;
+            margin-left: 60px;
+
+        }
+        }
+    </style>
+</head>
+<body>
+    <h6>Experts</h6>
+    <h2>Our Team Members</h2>
+    <div class="box">
+        <div class="card">
+            <img src="K.Raj.png" alt="">
+            <h4>RAJ KATUWAL</h4>
+            <p>Programmer</p>
+            <div class="image">
+                <img src="Pawan.png" alt="">
+                <img src="K.Raj.png" alt="">
+                <img src="Bipinn.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="Pawan.png" alt="">
+           <h4>PAWAN KATUWAL</h4>
+            <p>CEO</p>
+            <div class="image">
+                <img src="Pawan.png" alt="">
+                <img src="K.Raj.png" alt="">
+                <img src="Bipinn.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="Nabin.png" alt="">
+             <h4>NABIN MAGAR</h4>
+            <p>Wordpress</p>
+            <div class="image">
+                <img src="Pawan.png" alt="">
+                <img src="K.Raj.png" alt="">
+                <img src="Bipinn.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="Bipinn.png" alt="">
+          <h4>BIPIN RICHAL</h4>
+            <p>Youtuber</p>
+            <div class="image">
+                <img src="Pawan.png" alt="">
+                <img src="K.Raj.png" alt="">
+                <img src="Bipinn.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
